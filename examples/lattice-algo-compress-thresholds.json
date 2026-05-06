@@ -1,0 +1,17 @@
+{
+  "repo": "lattice-algo-compress-stack",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 187,
+    "watch": 107
+  },
+  "terms": [
+    "input width",
+    "search depth",
+    "boundary pressure",
+    "complexity"
+  ]
+}
