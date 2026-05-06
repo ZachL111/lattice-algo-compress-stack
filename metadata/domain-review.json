@@ -1,0 +1,73 @@
+{
+  "repo": "lattice-algo-compress-stack",
+  "language": "OCaml",
+  "category": "Algorithms",
+  "goal": "Package an OCaml local lab for compress analysis with round-trip fixtures, lossless normalization checks, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "input width",
+      "search depth",
+      "boundary pressure",
+      "complexity"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input width",
+      "signal": 59,
+      "slack": 49,
+      "drag": 11,
+      "confidence": 89,
+      "score": 223,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "search depth",
+      "signal": 81,
+      "slack": 52,
+      "drag": 22,
+      "confidence": 68,
+      "score": 216,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "boundary pressure",
+      "signal": 55,
+      "slack": 41,
+      "drag": 26,
+      "confidence": 88,
+      "score": 161,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "complexity",
+      "signal": 60,
+      "slack": 49,
+      "drag": 32,
+      "confidence": 93,
+      "score": 166,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input width",
+      "signal": 53,
+      "slack": 37,
+      "drag": 29,
+      "confidence": 94,
+      "score": 150,
+      "lane": "ship"
+    }
+  ]
+}
